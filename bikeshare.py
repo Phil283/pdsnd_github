@@ -33,7 +33,7 @@ def get_filters():
     # while-loop to ask for the users choice of city from the list.
     # if the user input does not fit the citylist he will get a notification and has to repeat his input.      
     while True:
-        city = input('Which city to analyze?: ').lower()
+        city = input('City?: ').lower()
         if city not in CITY_DATA.keys():
             print('\nWrong Input!\n')
             continue
@@ -52,7 +52,7 @@ def get_filters():
     # get user input for month (all, january, february, ... , june)
     # months are printed to show options for the user including 'all'.
     while month not in MONTH_DATA:
-        print('\nWhitch month to analyze? ')
+        print('\nMonth? ')
         for mo in MONTH_DATA:
                 print('   {}'.format(mo))        
         month = input('Please select a filter from the list: ').lower()
@@ -64,7 +64,7 @@ def get_filters():
     # get user input for day of week (all, monday, tuesday, ... sunday)
     # days are printed to show options for the user including 'all'.
     while day not in DAY_DATA:
-        print('\nWhich day to analyze?: ')
+        print('\nDay?: ')
         for da in DAY_DATA:
                 print('   {}'.format(da))        
         day = input('Please select a filter from the list: ').lower()
